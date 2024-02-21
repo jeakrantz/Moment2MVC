@@ -9,21 +9,26 @@
 <p>Lägg till en film med formuläret.</p>
 
 <form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
     <label asp-for="Title"></label>
     <br/>
     <input asp-for="Title">
+    <span asp-validation-for="Title"></span>
     <br/>
     <label asp-for="Director"></label>
     <br/>
     <input asp-for="Director">
+    <span asp-validation-for="Director"></span>
     <br/>
     <label asp-for="Year"></label>
     <br/>
     <input asp-for="Year">
+    <span asp-validation-for="Year"></span>
     <br/>
     <label asp-for="Genre"></label>
     <br/>
     <input asp-for="Genre">
+    <span asp-validation-for="Genre"></span>
     <br/>
     <input type="submit" value="Lägg till">
 </form>

@@ -3,27 +3,28 @@ using System.Text.Json.Serialization;
 
 namespace Moment2MVC.Models;
 
-public class MovieModel {
+public class MovieModel
+{
 
-    [Required]
-    [StringLength(50, MinimumLength=1)]
+    [Required(ErrorMessage = "Ange en korrekt titel")]
+    [StringLength(50, MinimumLength = 1)]
     [Display(Name = "Titel")]
-    public string? Title { get; set;}
-    [Required]
-    [StringLength(50, MinimumLength=1)]
+    public string? Title { get; set; }
+    [Required(ErrorMessage = "Ange en korrekt regissör")]
+    [StringLength(50, MinimumLength = 1)]
     [Display(Name = "Regissör")]
 
-    public string? Director { get; set;}
+    public string? Director { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "Ange ett korrekt år")]
     [MaxLength(4)]
-    [Range(1800,2400)]
-    [Display(Name = "År (yyyy)")]
+    [Display(Name = "År")]
 
-    public int? Year { get; set;}
-    
-    [Required]
+    public string? Year { get; set; }
+
+        [Required(ErrorMessage = "Ange en korrekt genre")]
+
     [Display(Name = "Genre")]
 
-    public string? Genre { get; set;}
+    public string? Genre { get; set; }
 }
