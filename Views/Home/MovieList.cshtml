@@ -1,0 +1,13 @@
+@model List<Moment2MVC.Models.MovieModel>
+
+@{
+    ViewData["title"] = "Film-lista";
+}
+
+<h2>Film-lista</h2>
+
+<ul>
+    @foreach(var movie in Model){
+        <li>@movie.Title</li>
+    }
+</ul>
