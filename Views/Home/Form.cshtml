@@ -1,5 +1,29 @@
+@model Moment2MVC.Models.MovieModel;
+
 @{
     ViewData["title"] = "Formulär";
 }
 
 <h2>Formulär</h2>
+
+<p>Lägg till en film med formuläret.</p>
+
+<form method="post">
+    <label asp-for="Title"></label>
+    <br/>
+    <input asp-for="Title">
+    <br/>
+    <label asp-for="Director"></label>
+    <br/>
+    <input asp-for="Director">
+    <br/>
+    <label asp-for="Year"></label>
+    <br/>
+    <input asp-for="Year">
+    <br/>
+    <label asp-for="Genre"></label>
+    <br/>
+    <input asp-for="Genre">
+    <br/>
+    <input type="submit" value="Lägg till">
+</form>
