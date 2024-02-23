@@ -6,8 +6,25 @@
 
 <h2>Film-lista</h2>
 
-<ul>
+<table>
+    <tr>
+        <th>Titel</th>
+        <th>Reggisör</th>
+        <th>Utgivningsdatum</th>
+        <th>Genre</th>
+        <th>Barntillåten</th>
+    </tr>
     @foreach(var movie in Model){
-        <li>@movie.Title</li>
+    <tr>
+        <td>@movie.Title</td>
+        <td>@movie.Director</td>
+        <td>@movie.Release</td>
+        <td>@movie.Genre</td>
+            @if(movie.AgeLimit == true){
+                <td>Ja</td>
+            } else {
+                <td>Nej</td>
+            }
+    </tr>
     }
-</ul>
+</table>

@@ -26,6 +26,11 @@ header{
     border-bottom: solid 2px brown;
 }
 
+header h1 a {
+    text-decoration: none;
+    color: #a01818;
+}
+
 header nav ul {
     display: flex;
     flex-direction: row;
@@ -59,11 +64,12 @@ form {
     margin: 2em 0;
 }
 
-input {
+input, select {
     padding: .3em;
     border: 1px #a01818 solid;
     margin: 1em 0;
     border-radius: 5px;
+    color: #a01818;
 }
 
 input[type="submit"]{
@@ -71,12 +77,23 @@ input[type="submit"]{
     color: #eeeee4;
     border: 1px solid #eeeee4;
     cursor: pointer;
+    font-size: medium;
 }
 
 input[type="submit"]:hover{
     background-color: #eeeee4;
     color: #a01818;
     border: 1px solid #a01818;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px #a01818;
+    padding: .6em;
+    max-width: 10em;
 }
 
 @media only screen and (max-width: 800px) {

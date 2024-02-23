@@ -11,24 +11,34 @@
 <form method="post">
     <div asp-validation-summary="ModelOnly"></div>
     <label asp-for="Title"></label>
-    <br/>
+    <br />
     <input asp-for="Title">
     <span asp-validation-for="Title"></span>
-    <br/>
+    <br />
     <label asp-for="Director"></label>
-    <br/>
+    <br />
     <input asp-for="Director">
     <span asp-validation-for="Director"></span>
-    <br/>
-    <label asp-for="Year"></label>
-    <br/>
-    <input asp-for="Year">
-    <span asp-validation-for="Year"></span>
-    <br/>
+    <br />
+    <label asp-for="Release"></label>
+    <br />
+    <input asp-for="Release">
+    <span asp-validation-for="Release"></span>
+    <br />
     <label asp-for="Genre"></label>
-    <br/>
-    <input asp-for="Genre">
+    <br />
+    <select asp-for="Genre">
+        <option value="Drama">Drama</option>
+        <option value="Komedi">Komedi</option>
+        <option value="Romantik">Romantik</option>
+        <option value="Action">Action</option>
+        <option value="Action">Sci-fi</option>
+        <option value="Action">Fantasy</option>
+    </select>
     <span asp-validation-for="Genre"></span>
+    <br />
+    <label asp-for="AgeLimit"></label>
+    <input asp-for="AgeLimit">
     <br/>
     <input type="submit" value="Lägg till">
 </form>

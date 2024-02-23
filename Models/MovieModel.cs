@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Moment2MVC.Models;
 
@@ -16,15 +17,18 @@ public class MovieModel
 
     public string? Director { get; set; }
 
-    [Required(ErrorMessage = "Ange ett korrekt år")]
-    [MaxLength(4)]
-    [Display(Name = "År")]
+    [Required(ErrorMessage = "Ange ett korrekt datum")]
+    [Display(Name = "Utgivningsdatum")]
+    [DataType(DataType.Date)]
+    public string? Release { get; set; }
 
-    public string? Year { get; set; }
-
-        [Required(ErrorMessage = "Ange en korrekt genre")]
+    [Required(ErrorMessage = "Ange en korrekt genre")]
 
     [Display(Name = "Genre")]
 
     public string? Genre { get; set; }
+
+    [Display(Name = "Barntillåten")]
+    public bool AgeLimit {get; set;}
+
 }

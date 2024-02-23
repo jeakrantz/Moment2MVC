@@ -8,6 +8,8 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
+        ViewBag.M = "ViewBag meddelande";
+        ViewData["Message"] = "ViewData meddelande";
         return View();
     }
     [Route("/om")]
@@ -51,6 +53,4 @@ public class HomeController : Controller
         }
         return View();
     }
-
-
 }
