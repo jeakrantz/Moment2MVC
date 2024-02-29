@@ -8,13 +8,8 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
-        ViewBag.M = "ViewBag meddelande";
-        ViewData["Message"] = "ViewData meddelande";
-        return View();
-    }
-    [Route("/om")]
-    public IActionResult About()
-    {
+        ViewBag.M = "Moment 2 - Uppgift 1";
+        ViewData["Message"] = "Moment 2 - Uppgift 2";
         return View();
     }
     [Route("/film-lista")]

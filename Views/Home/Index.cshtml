@@ -4,10 +4,52 @@
 
 <h2>Startsidan</h2>
 
-<p>
-    @ViewBag.M
-</p>
+<partial name="_InfoPartial.cshtml" />
 
-<p>
+<h3>
+    @ViewBag.M
+</h3>
+<ul>
+    <li>
+        Att ni verkligen använder Models, Controller och Vyer (Views).
+    </li>
+    <li>
+        På något sätt ändra grundroutingen.
+    </li>
+    <li>
+        Skicka data: manipulera/uppdatera/beräkna i controller, mata in/interagera med i Views, möjligtvis spara/hämta i
+        Model (utan databaskoppling).
+    </li>
+    <li>
+        Ha minst tre separata Views.
+    </li>
+    <li>
+        Spara data så att det finns tillgängligt då man går från en sida till en annan. Session och/eller Cookie,
+        alternativt extern JSON-fil.
+    </li>
+    <li>
+        Skicka data från controllern och vyn med tre varianter: ViewBag, ViewData och parameterpassning med en vy-modell
+        i grunden.Förklaring på parameterpassningen: action-metoden returnerar return
+        view(namnet_på_en_instans_av_en_modell) istället för enbart en return view().
+    </li>
+</ul>
+
+
+<h3>
     @ViewData["Message"]
-</p>
+</h3>
+<ul>
+    <li>
+        Att webbplatsen bygger på egen HTML/CSS/JavaScript, ej på autogenererad (scaffolding) Bootstrap.
+    </li>
+    <li>
+        Skapa någon slags partial som laddas in och används i minst två Views.
+    </li>
+    <li>
+        Implementera en enkel validering för ett eller fler input-fält.
+    </li>
+    <li>
+        Använda minst tre olika typer av inmatnings-kontroller i vyn. Testa något mer än textbox: dropdownlist,
+        radiobuttons, checkboxar eller liknande.
+    </li>
+</ul>
